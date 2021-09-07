@@ -31,7 +31,9 @@ namespace Hangman
             Console.Write("Welches Wort wollen Sie der Liste hinzufügen?: ");
             newWord = Console.ReadLine();
 
-            File.AppendAllText(FilePath,newWord);
+            File.AppendAllText(FilePath,newWord + "\n");
+
+            Console.WriteLine();
 
         }
 
@@ -57,7 +59,9 @@ namespace Hangman
             foreach (string word in allWords)
             {
                File.AppendAllText(FilePath, word.ToLower() + "\n");
-            }    
+            }
+
+            Console.WriteLine();
 
         }
     }
